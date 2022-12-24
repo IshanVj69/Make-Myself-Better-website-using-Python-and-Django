@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block title %} Register Done{% endblock %}
+
+
+{% block body %}
+<section style="padding-top: 10%">
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+<div class="container">
+   <h3>Welcome to the Make myself better community</h3>
+   <p style="color : black; "><b><strong>"Your account has been created, You can <a href="{% url 'login' %}">Login Here</a></strong></b></p>
+</div>
+   </section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "dase.html" %}
+{% include 'navbar.html' %}
+
+{% block title %}Share a Post{% endblock %}
+{% block content %}
+<section id="share " style="padding-top: 20%;">
+
+{% if sent %}
+<h1>E-mail sent successfully</h1>
+
+<p>"{{post.title}}" was sent to successfully to {{ form.cleaned_data.to}}</p>
+{% else %}
+
+<h1>Share " {{ post.title }} by e-mail</h1>
+<form method = "POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="Send E-mail">
+</form>
+{% endif %}
+
+    </section>
+{% endblock %}

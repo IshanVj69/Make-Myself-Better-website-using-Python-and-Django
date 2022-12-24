@@ -1,0 +1,71 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+<nav class=" navbar navbar-expand-lg fixed-top navbar-light " style="background-color : rgb(0,0,0, 0.8);">
+  <img class="fgh" src = "http://127.0.0.1:8000/static/images/Transparent-logo.png" alt = "fgh">
+  <a class="navbar-brand" style="color: white;" href="{% url 'article_list' %}">Make myself better Community</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-5 ">
+      {% if request.user.is_authenticated %}
+
+      <li class="nav-item active">
+        <a class="njk edf nav-link" style="color: white;" href="{% url 'article_list' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="njk edf nav-link disabled" style="color: white;" href="" >Welcome, {{request.user.username}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="njk edf nav-link"  style="color: white;" href="{% url 'article_form' %}">Add Article</a>
+      </li>
+      <li class="nav-item">
+        <a class="njk edf nav-link"  style="color: white;" href="/blog">my blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="njk edf nav-link"  style="color: white;" href="{% url 'logout' %}">Logout</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="njk edf nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="egf dropdown-item"  style="color: black;" href="{% url 'password-change' %}">Change Password</a></li>
+
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="njk edf nav-link"  style="color: white;" href="{% url 'index' %}">Explore</a>
+      </li>
+      <li>
+        <p>
+
+  <script src="https://kit.fontawesome.com/190550c134.js" crossorigin="anonymous"></script>
+          <button class="btn btn-dark" style="font-family: 'Ubuntu', sans-serif; background-color : rgb(0,0,0, 0.8);" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+   <strong><i class="fa-solid fa-magnifying-glass"></i>  Search Article</strong>
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <form  method="get" action="searchbar" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search by title" aria-label="Search" name="query" id="query">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+        </li>
+      {% else %}
+
+      <li class="nav-item">
+        <a class="njk edf nav-link"  style="color: white;" href="{% url 'login' %}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="njk edf nav-link"  style="color: white;" href="{% url 'register' %}">Register</a>
+      </li>
+
+      {% endif %}
+    </ul>
+  </div>
+</nav>

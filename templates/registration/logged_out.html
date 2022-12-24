@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Logout{% endblock %}
+
+
+{% block body %}
+<section style="padding-top: 15%;">
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+<div class="container">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <p style="color:black; font-family: 'Ubuntu', sans-serif; font-size: 2rem;"><b><strong>You have been logged out, you can <a href="{% url 'login' %}">Login here</a></strong></b></p>
+</div>
+</section>
+{% endblock %}

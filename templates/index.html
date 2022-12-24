@@ -1,0 +1,1188 @@
+{% load static %}
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Make myself better</title>
+    <link rel="icon" href="static/images/favicon.ico">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+    <!-- media query -->
+    <meta name = "viewport" content="width=device-width, inital-scale =1.0">
+    <!-- Java Script -->
+    <!-- <script src="{% static 'script.js' %}" type="text/javascript"></script> -->
+    <script src="//code.tidio.co/kvcr2wwy2wflygajfvpwhl2iglwz1dcd.js" async></script>
+
+  <!-- Fontawsome -->
+  <script src="https://kit.fontawesome.com/190550c134.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ <!-- Java Script -->
+    <!-- <script src="{% static 'js/script.js' %}" type="text/javascript"></script> -->
+     <script src="//code.tidio.co/kvcr2wwy2wflygajfvpwhl2iglwz1dcd.js" async></script>
+  {% if user.is_authenticated %}
+  <nav class=" navbar navbar-expand-lg fixed-top navbar-light " style="background-color : rgb(0,0,0, 0.8);">
+   <img class="fgh" src = "static/images/Transparent-logo.png " alt = "fgh">
+  <h1 class="navbar-brand" style="color:white;" href="#"><b><strong>Make myself better</strong></b></h1>
+       <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <button class="navbar-toggler"  style="color:white;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+          <a class=" edf nav-link active" style="color:white;" href="#AuthArticles"><b><strong>Articles</strong></b></a>
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+      </li><li class="nav-item">
+        <a class="njk edf nav-link active" style="color:white;" href="#AuthQuote"><b><strong>Quotes</strong></b></a>
+      </li>
+      <li class="nav-item">
+        <a class="edf nav-link active" style="color:white;" href="#AuthVedios"><b><strong>Videos</strong></b></a>
+      </li>
+        <li class="nav-item">
+            <a class="edf nav-link active" style="color:white;" href="{% url 'article_list' %}"><b><strong>Join Community</strong></b></a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="edf nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <b><strong>Lifestyle</strong></b>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="egf dropdown-item" href="#AuthLAudio"><b>Listening Podcast and songs</b></a>
+          <div class="dropdown-divider"></div>
+          <a class="egf dropdown-item" href="#AuthHealth"><b>Health</b></a>
+            <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+            <div class="dropdown-divider"></div>
+          <a class="egf dropdown-item" href="#AuthFinance"><b>Finance</b></a>
+          <div class="dropdown-divider"></div>
+          <a class="egf dropdown-item" href="#AuthLifeHacks"><b>Life Hacks</b></a>
+        </div>
+      </li>
+        <li class = "edfv nav-item">
+            <!--<p>
+  <a class="btn btn-dark" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Search
+  </a>
+</p> -->
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+   <script async src="https://cse.google.com/cse.js?cx=5e1903f33165c606d"></script>
+   <div class="gcse-search"></div>
+  </div>
+</div>
+        </li>
+    </ul>
+
+      <ul>
+      <li class="nav-item dropdown">
+      <a class="edf nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <b><strong><i class="fa-solid fa-user"></i>   {{request.user}}</strong></b>
+        </a>
+        <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+          <button class="egf dropdown-item" type="button"  data-toggle="modal" data-target="#exampleModal">
+              <b>Profile</b></button>
+            <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+            <div class="dropdown-divider"></div>
+            <a class="egf dropdown-item" href = "app5/logout"><b>Logout</b></a>
+        </div>
+
+          </li>
+          </ul>
+       <!--<h5><b><strong></strong></b></h5> -->
+  </div>
+</nav>
+  {% for msg in messages %}
+ <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{ msg }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  {% endfor %}
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-user"></i>  Profile Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+         <li class="list-group-item"><strong>First Name : {{request.user.first_name}}</strong></li>
+            <li class="list-group-item"><strong>Last Name : {{request.user.last_name}}</strong></li>
+            <li class="list-group-item"><strong>Username : {{request.user.username}}</strong></li>
+            <li class="list-group-item"><strong>E-mail id : {{request.user.email}}</strong></li>
+
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <section id = "abc">
+      <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+
+        </div>
+      </header>
+      <main role="main" class="inner cover">
+        <div class="container">
+                <div class="masthead-subheading" style="padding-top: 20%"><b><strong>Welcome {{request.user}}.</strong></b></div>
+                <div class="masthead-heading "><b><strong>It's time to make yourself better. Let's Explore</strong></b>
+                </div>
+                <div class="bottom-container">
+                <a class="btn btn-warning btn-xl" href="#AuthArticles"><b><strong>Get Started</strong></b></a>
+                </div>
+            </div>
+      </main>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+  </section>
+
+  <section id="AuthArticles">
+            <div class="container">
+                <div class="text-center">
+                     <h2 class="rst section-heading "><b><strong>Articles</strong></b></h2>
+
+                    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+
+        </div>
+      </header>
+      <main role="main" class="inner cover">
+        <div class="container">
+            <div class = "row">
+<div class="colum1 col-md-3 mt-3">
+    		    <div class="llm teo card profile-card-5">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="static/images/MMB-IMAGE1.jpg" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class=" htt card-title"><b><strong>Motivational Articles</strong></b></h5>
+                    <h6 class=" htt card-text"><strong>Helps in driving motivation within your personality.</strong></h6>
+                    <a href="app8/articles" class="btn btn-primary"><i class="fa-solid fa-book-open-reader"></i>   Go for read</a>
+                  </div>
+                </div>
+                <!--<p class="mt-3 w-100 float-left text-center"><strong>Card with Floting Picture</strong></p>-->
+    		</div>
+<div class="colum1 col-md-3 mt-3">
+    		    <div class="llm  teo card profile-card-5">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="static/images/MMB-IMAGE5.jpg" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class=" htt card-title"><b><strong>Career Articles</strong></b></h5>
+                    <h6 class=" htt yiu card-text"><strong>Helps in making path for excellent career in life.</strong></h6>
+                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-book-open-reader"></i>   Go for read more</a>
+                  </div>
+                </div>
+
+    		</div>
+<div class="colum1 col-md-3 mt-3">
+    		    <div class="llm  teo card profile-card-5">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="static/images/MMB-IMAGES13.jpg" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class=" htt card-title"><b><strong>Relationship Articles</strong></b></h5>
+                    <h6 class=" htt card-text"><strong>Supports in building healthy relationships in life.</strong></h6>
+                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-book-open-reader"></i>  Go for read more</a>
+                  </div>
+                </div>
+
+    		</div>
+<div class="colum1 col-md-3 mt-3">
+    		    <div class="llm  teo card profile-card-5">
+    		        <div class="card-img-block">
+    		            <img class="card-img-top" src="static/images/MMB-IMAGE11.jpg" alt="Card image cap">
+    		        </div>
+                    <div class="card-body pt-0">
+                    <h5 class=" htt card-title"><b><strong>Goal Setting Articles</strong></b></h5>
+                    <h6 class=" htt yiu card-text"><strong>Helps to set goals in life.</strong></h6>
+                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-book-open-reader"></i>  <strong>Go for read more</strong></a>
+
+                    </div>
+                </div>
+    		</div>
+
+</div>
+                <div class="masthead-subheading"><b><strong></strong></b></div>
+                <div class="masthead-heading "><b><strong></strong></b>
+                </div>
+            </div>
+      </main>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+                </div>
+            </div>
+
+  </section>
+  <section id="AuthQuote" style="background-image: url('https://wallpaperaccess.com/full/4600302.jpg');">
+            <div class="container">
+                <div class="text-center">
+                     <h2 class="rst section-heading "><b><strong>Quotes</strong></b></h2>
+
+                    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                <header class="masthead mb-auto">
+                  <div class="inner">
+
+                  </div>
+                </header>
+                <main role="main" class="inner cover">
+                  <div class="container">
+                      <div class = "row">
+              <div class="col-md-4 mt-4">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class=" card-img-top" src="static/images/MMB-Q1.png" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                      <a href="{% url 'Quotes' %}" class="btn btn-primary btn-lg btn-block"><i class="fa-solid fa-book-open-reader"></i>  Go To Read More</a>
+                                </div>
+                              </div>
+
+                  		</div>
+                          <div class="col-md-4 mt-4">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class=" card-img-top" src="static/images/MMB-Q2.png" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+
+                                      <a href="{% url 'Quotes' %}" class="btn btn-primary btn-lg btn-block"><i class="fa-solid fa-book-open-reader"></i>  Go To Read More</a>
+                                  </div>
+                              </div>
+
+                  		</div>
+              <div class="col-md-4 mt-4">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class="card-img-top" src="static/images/MMB-Q3.png" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+
+                                      <a href="{% url 'Quotes' %}" class="btn btn-primary btn-lg btn-block"><i class="fa-solid fa-book-open-reader"></i>  Go To Read More</a>
+                                </div>
+                              </div>
+                  		</div>
+                  		</div>
+                              <div class="masthead-subheading"><b><strong></strong></b></div>
+                              <div class="masthead-heading "><b><strong></strong></b>
+                              </div>
+                  </div>
+                </main>
+                <footer class="mastfoot mt-auto">
+                  <div class="inner">
+                  </div>
+                </footer>
+              </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+
+                </div>
+            </div>
+  </section>
+
+  <section id="AuthVedios">
+             <div class="container">
+                <div class="text-center">
+                     <h2 class="rst section-heading "><b><strong>Videos</strong></b></h2>
+
+                    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+
+        </div>
+      </header>
+      <main role="main" class="inner cover">
+        <div class="container">
+                <div class = "row">
+              <div class="col-md-4 mt-4">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class="card-img-top" src="static/images/MMB-SS1.png" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h5 class="htt card-title">Social Skills</h5>
+                                  <p class="htt card-text">Helps you in interaction and socialization among others in society.</p>
+                                  <a href="app7/Videos" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+
+                  		</div>
+              <div class="col-md-4 mt-4">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class="card-img-top" src="static/images/MMB-SS2.png" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h5 class="htt card-title">Motivation</h5>
+                                  <p class="htt card-text">Energize and Encourages you inner to do and accomplish your goals in life. .</p>
+                                  <a href="app9/Vmotivate" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+
+                  		</div>
+              <div class="col-md-4 mt-4">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class="card-img-top" src="static/images/MMB-SS3.png" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h5 class="htt card-title">Health</h5>
+                                  <p class="htt card-text">Support and Guides you to maintain good healthy both pysically as well as mentally.</p>
+                                  <a href="#" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+                  		</div>
+                  		</div>
+                              <div class="masthead-subheading"><b><strong></strong></b></div>
+                              <div class="masthead-heading "><b><strong></strong></b>
+                              </div>
+                          </div>
+      </main>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+                </div>
+            </div>
+
+  </section>
+  <section id="AuthLAudio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="rst section-heading "><b><strong>Music & Podcasts</strong></b></h2>
+
+                    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+
+        </div>
+      </header>
+      <main role="main" class="inner cover">
+        <div class="container">
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+      <div class="container cta-100 ">
+        <div class="container">
+          <div class="row blog">
+            <div class="col-md-12">
+              <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#blogCarousel" data-slide-to="1"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class=" multi col-md-4" >
+                        <div class="jkl item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Image-->
+                            <figure> <img alt="" src="https://lh3.googleusercontent.com/NLn9bZ6F5jWtVcbS-R1HCEfNWzb90WHWbeOgrQUrGtGwgZlM7DSE87rSqmIINIkiBvGc6TStszIZtMXm=w544-h544-l90-rj"> </figure>
+                          </div>
+                          <div class="llm item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="https://music.youtube.com/watch?v=S2RnQJu_3D8&list=PLaTBhVj3aipA97hIkzYQsPzlPCWFptu8B" tabindex="0">
+                                <h5 class="jklp"><strong>Motivational Podcast</strong></h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                                <p class="jklp" style="color : white;">Playlist • Dana Sullivan • 2022
+                                 15 songs • 1 hour, 27 minutes
+                                source : Youtube Music</p>
+                            </div>
+                            <!--Read More Button-->
+                          </div>
+                            <a href="https://music.youtube.com/watch?v=S2RnQJu_3D8&list=PLaTBhVj3aipA97hIkzYQsPzlPCWFptu8B" class="jklp btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fa-solid fa-headphones-simple"></i>  Listen Now</a>
+                        </div>
+
+                      </div>
+                      <div class="multi col-md-4" >
+                         <div class=" jkl item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Image-->
+                            <figure> <img alt="" src="https://wallpaperaccess.com/full/2742175.jpg"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="https://music.youtube.com/playlist?list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl" tabindex="0">
+                                <h5 class="jklp"><b><strong>Best Pop Songs of All Time: Playlist of Good Songs </strong></b></h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                                <p class="jklp" style="color : white;">Playlist • Redlist - Just Hits • 2022
+                                    187 songs • 6+ hours</p>
+                            </div>
+                            <!--Read More Button-->
+                          </div>
+                            <a href="https://music.youtube.com/playlist?list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl" class="jklp btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fa-solid fa-headphones-simple"></i>  Listen Now</a>
+                        </div>
+                      </div>
+                      <div class="multi col-md-4" >
+                        <div class="jkl item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+
+                            <!--Image-->
+                            <figure> <img  src="https://lh3.googleusercontent.com/sVrbnUZE33DNr_cvmzK4I4qEP_ihWZPQL3eDsbtTVdcAvRwCx0D8G0cEbGFlN-JAqjNqH7Li6PKp15fo=w544-h544-l90-rj"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="https://music.youtube.com/watch?v=tJYpZKU81lc&list=RDQM3w5s57eGJt4" tabindex="0">
+                                <h5 class="jklp">Hollywood Motivational Songs</h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <div class="item-box-blog-data" style="padding: px 15px;">
+
+                            </div>
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p class="jklp" style="color : white;">Source: Youtube Music.</p>
+                            </div>
+
+                            <!--Read More Button-->
+                          </div>
+                            <a href="https://music.youtube.com/watch?v=tJYpZKU81lc&list=RDQM3w5s57eGJt4" class="jklp btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fa-solid fa-headphones-simple"></i>  Listen Now</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--.row-->
+                  </div>
+                  <!--.item-->
+                  <div class="carousel-item ">
+                    <div class="row">
+                      <div class="multi col-md-4" >
+                        <div class="jkl jklpe item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+
+                            <!--Image-->
+                            <figure> <img  src="https://lh3.googleusercontent.com/TMbA3LImAL96nFkm5cI1x6LiEMvMbRg4IRxEeABd9qpXsfmwKhZHRD1MucnjG5QIsVEp0Vpn7h7M51FH3Q=w544-h544-l90-rj"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="{% url 'listenc' %}" tabindex="0">
+                                  <h5 class="jklp"><b><strong>Fresh Morning Songs</strong></b></h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <div class="item-box-blog-data" style="padding: px 15px;">
+
+                            </div>
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                              <p class="jklp" style="color : white;">Fresh Morning songs station,
+                                              Source: Youtube Music, 2022,
+                                              </p>
+                            </div>
+
+                            <!--Read More Button-->
+                          </div>
+                            <a href="https://music.youtube.com/watch?v=xTvyyoF_LZY&list=RDQMmoNnlsxvZhw" class="jklp btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fa-solid fa-headphones-simple"></i>Listen Now</a>
+                        </div>
+                      </div>
+                      <div class="col-md-4" >
+                        <div class="jkl jklpe item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+
+                            <!--Image-->
+                            <figure> <img alt="" src="https://lh3.googleusercontent.com/8H_RrqPRI_Wb1-Xsd7Ky7LLlYbWZ2olOGUOZeuA7VdFiI_Q836aj9s8TZVsSSicLbMYo94dO2tsIWqQ=w544-h544-l90-rj"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_l4zXRAZ8rMBbXcICdxzbyQKSaRWRF_-cY" tabindex="0">
+                                <h5 class="jklp"><b><strong>Happy Songs: Bollywood</strong></b></h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <div class="item-box-blog-data" style="padding: px 15px;">
+
+                            </div>
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                                <p class="jklp" style="color : white;">Playlist • YouTube Music • 2022
+                                   40 songs • 2 hours, 32 minutes</p>
+                            </div>
+                            <!--Read More Button-->
+                          </div>
+                            <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_l4zXRAZ8rMBbXcICdxzbyQKSaRWRF_-cY" class="jklp btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fa-solid fa-headphones-simple"></i>Listen Now</a>
+                        </div>
+                      </div>
+                      <div class="col-md-4" >
+                        <div class="jkl item-box-blog">
+                          <div class="item-box-blog-image">
+                            <!--Date-->
+
+                            <!--Image-->
+                            <figure> <img alt="" src="https://lh3.googleusercontent.com/zrhvk7AWi3IxY5DwNXeE63icYl9Dv3Ji-9Suc__EIF9XRNbyqL99-Y93NGNrwJENwBh7Ketl-m020hc=w544-h544-l90-rj"> </figure>
+                          </div>
+                          <div class="item-box-blog-body">
+                            <!--Heading-->
+                            <div class="item-box-blog-heading">
+                              <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_mscC5X7I6BUo8OzG5AMqy9enYav3TExts" tabindex="0">
+                                <h5 class="jklp"><b><strong>Bollywood Motivational Songs</strong></b></h5>
+                              </a>
+                            </div>
+                            <!--Data-->
+                            <div class="item-box-blog-data" style="padding: px 15px;">
+
+                            </div>
+                            <!--Text-->
+                            <div class="item-box-blog-text">
+                                <p class="jklp" style="color : white;">Playlist • YouTube Music • 2022
+                                                40 songs • 2 hours, 21 minutes.</p>
+                            </div>
+
+                            <!--Read More Button-->
+                          </div>
+                            <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_mscC5X7I6BUo8OzG5AMqy9enYav3TExts" class="jklp btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fa-solid fa-headphones-simple"></i>Listen Now</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--.row-->
+                  </div>
+                  <!--.item-->
+                </div>
+                <!--.carousel-inner-->
+              </div>
+                <a class="carousel-control-prev" href="#blogCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#blogCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+              <!--.Carousel-->
+            </div>
+          </div>
+        </div>
+      </div>
+                              <div class="masthead-subheading"><b><strong></strong></b></div>
+                              <div class="masthead-heading "><b><strong></strong></b>
+                              </div>
+                          </div>
+      </main>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+
+                </div>
+            </div>
+  </section>
+  <section id="AuthHealth" style="background-image: url('https://cdn.wallpapersafari.com/93/7/3cAkep.jpg');">
+            <div class="container">
+                <div class="text-center">
+                     <h2 class="rst section-heading "><b><strong>Health & Habits</strong></b></h2>
+
+                    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                <header class="masthead mb-auto">
+                  <div class="inner">
+
+                  </div>
+                </header>
+                <main role="main" class="inner cover">
+                  <div class="container">
+                      <div class = "row">
+              <div class="col-md-6 mt-6">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class=" card-img-top" src="static/images/MMB-S1.jpg" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h3 class="htt card-text"><b><strong>Health and Habits Tips</strong></b></h3>
+                                  <a href="app8/Hintips" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+
+                  		</div>
+              <div class="lkm col-md-6 mt-6">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class="card-img-top" src="https://www.makemebetter.net/wp-content/uploads/2022/05/main-7-1536x864.jpg" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h2 class="htt card-title">Health and Habits</h2>
+                                  <h3 class="tpl htt card-text"><b><strong></strong>Articles</b></h3>
+                                  <a href="Myapp/pagination" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+                  		</div>
+                  		</div>
+                              <div class="masthead-subheading"><b><strong></strong></b></div>
+                              <div class="masthead-heading "><b><strong></strong></b>
+                              </div>
+                  </div>
+                </main>
+                <footer class="mastfoot mt-auto">
+                  <div class="inner">
+                  </div>
+                </footer>
+              </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+
+                </div>
+            </div>
+  </section>
+  <section  id="AuthFinance" style="background-image: url('https://images4.alphacoders.com/113/113576.jpg');">
+            <div class="container">
+                <div class="text-center">
+
+                     <h2 class="rst section-heading "><b><strong>Finance</strong></b></h2>
+
+                    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                <header class="masthead mb-auto">
+                  <div class="inner">
+
+                  </div>
+                </header>
+                <main role="main" class="inner cover">
+                  <div class="container">
+                     <div class = "row">
+              <div class="col-md-6 mt-6">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class=" card-img-top" src="static/images/MMB-S2.jpg" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h3 class="htt card-text"><b><strong>Financial Tips</strong></b></h3>
+                                  <a href="app8/Fintips" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+
+                  		</div>
+              <div class="lkm col-md-6 mt-6">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class="card-img-top" src="https://www.makemebetter.net/wp-content/uploads/2022/03/main-3-1536x864.jpg" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h2 class="htt card-title">Financial Wellness</h2>
+                                  <h3 class="tpl htt card-text"><b><strong></strong>Articles</b></h3>
+                                  <a href="Myapp/pagination" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+                  		</div>
+                  		</div>
+                              <div class="masthead-subheading"><b><strong></strong></b></div>
+                              <div class="masthead-heading "><b><strong></strong></b>
+                              </div>
+                  </div>
+                </main>
+                <footer class="mastfoot mt-auto">
+                  <div class="inner">
+
+                  </div>
+                </footer>
+              </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+                </div>
+            </div>
+  </section>
+  <section id="AuthLifeHacks" style="background-image: url('https://media.istockphoto.com/vectors/seamless-dark-abstract-pattern-geometric-print-composed-of-triangles-vector-id924108710?k=20&m=924108710&s=612x612&w=0&h=W0epgnX85Clm9ITDR-dFN4ZnJROUXIy67Wy7LCRtyMI=');">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="rst section-heading "><b><strong>Life Hacks</strong></b></h2>
+
+                    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                <header class="masthead mb-auto">
+                  <div class="inner">
+
+                  </div>
+                </header>
+                <main role="main" class="inner cover">
+                  <div class="container">
+                      <div class = "row">
+              <div class="col-md-6 mt-6">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class=" card-img-top" src="static/images/MMB-H1.jpg" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h3 class="htt card-text"><b><strong>Life Hacks Tips</strong></b></h3>
+                                  <a href="app8/Lintips" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+
+                  		</div>
+              <div class="lkm col-md-6 mt-6">
+                  		    <div class="llm tei card profile-card-5">
+                  		        <div class="card-img-block">
+                  		            <img class="card-img-top" src="https://www.makemebetter.net/wp-content/uploads/2021/07/MMB-IMAGE-JPG-23-1536x864.jpg" alt="Card image cap">
+                  		        </div>
+                                  <div class="card-body pt-0">
+                                  <h2 class="htt card-title">Lifestyle Choices</h2>
+                                  <h3 class="tpl htt card-text"><b><strong></strong>Articles</b></h3>
+                                  <a href="Myapp/pagination" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i>  Go Now</a>
+                                </div>
+                              </div>
+                  		</div>
+                  		</div>
+                              <div class="masthead-subheading"><b><strong></strong></b></div>
+                              <div class="masthead-heading "><b><strong></strong></b>
+                              </div>
+                  </div>
+                </main>
+                <footer class="mastfoot mt-auto">
+                  <div class="inner">
+
+                  </div>
+                </footer>
+              </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+                </div>
+            </div>
+  </section>
+
+  <section id = "ctasm2">
+      <h4 class="ctas" style="color: white;" >Share this website on following social media platforms  : </h4>
+          <div class="row">
+  <div class = "feature-box col-lg-4">
+      <a href="whatsapp://send?text=http://127.0.0.1:8000/" data-action="share/whatsapp/share" target="_blank"><i class="fa-brands fa-whatsapp-square fa-3x"></i></a>
+    <p style="color: white;"><b>Whatsapp</b></p>
+  </div>
+  <div class = "feature-box col-lg-4">
+     <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0&appId=742010503658334&autoLogAppEvents=1" nonce="4vK4obNk"></script>
+      <div class="fb-share-button" data-href="http://127.0.0.1:8000/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+    <p><b style="color: white;">facebook</b></p>
+  </div>
+   <div class = "feature-box col-lg-4">
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+     <p style="color: white;"><b>Linkedin</b></p>
+  </div>
+   </div>
+      <h4 class="ctas" style="color: white;" >Follow us on following Social Media Accounts : </h4>
+   <div class="row">
+  <div class = "feature-box col-lg-4">
+      <a href="https://www.instagram.com/ishanvj25/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+    <p style="color: white;"><b>Instagram</b></p>
+  </div>
+  <div class = "feature-box col-lg-4">
+      <a href="https://www.facebook.com/ishan.vijay.731"><i class="fa-brands fa-facebook fa-2x"></i></a>
+    <p><b style="color: white;">facebook</b></p>
+  </div>
+   <div class = "feature-box col-lg-4">
+       <a href="https://www.linkedin.com/in/ishan-vijay-49a655224/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+     <p style="color: white;"><b>Linkedin</b></p>
+  </div>
+   </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <section id = "footer1" >
+
+      <div style="padding-bottom : 7%; ">
+          <a href=" mailsender/mailform " class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Contact Us</a>
+      </div>
+    <img class="fgh" src = "http://127.0.0.1:8000/static/images/Transparent-logo.png" alt = "fgh">
+    <p style = "color: white;"><b>© Copyright 2022 Make myself better</b></p>
+
+      <p style="color: white;" ><b>Source Make me better</b></p>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% else %}
+  <script src="//code.tidio.co/kvcr2wwy2wflygajfvpwhl2iglwz1dcd.js" async></script>
+  <section id="title">
+    <div class = "container-fluid">
+
+    <!-- Nav Bar -->
+<nav class =  "navbar navbar-expand-lg navbar-dark ">
+    <img class="fgh" src = "http://127.0.0.1:8000/static/images/Transparent-logo.png" alt = "fgh">
+   <a class =  "navbar-brand" href = "">Make Myself better</a>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class =  "navbar-nav ml-auto">
+
+
+        <li class =  "navbar-item">
+          <a class= " btn btn-primary" href = "app3/signup" role="button">Sign Up</a>
+        </li>
+        <li class =  "navbar-item">
+          <a class="btn btn-primary" href = "app4/logiin" role="button">Login</a>
+        </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+
+
+    <!-- Title -->
+
+    <div class = "row">
+      <div class ="col-lg-6">
+      <h1>Make Myself better </h1><br>
+      <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+      <h4 class = "sub">The way to make path clear towards desired goals and target by driving
+          a motivation within your personality in order to accomplish good career
+          in life.</h4><br><br>
+
+        </div>
+    <div class ="col-lg-6">
+    <img class ="motivation" src="https://nationaltoday.com/wp-content/uploads/2021/10/Motivation-and-Inspiration-Day-640x514.jpg" alt="motivation-mockup">
+    </div>
+        <h3>“We must become the change we want to see.” </h3>
+        <p class="Mg mt-5"><b><strong>— Mahatma Gandhi</strong></b></p>
+    </div>
+    </div>
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+  <div class="row">
+  <div class = "feature-box col-lg-4">
+      <i class="icon fa-solid fa-location-arrow fa-4x"></i>
+    <h3>Easy to use.</h3>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500&display=swap" rel="stylesheet">
+    <p style="color : white;">So easy to navigate and get article and feeds related to your choice.</p>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  </div>
+  <div class = "feature-box col-lg-4">
+      <i class="icon fa-solid fa-newspaper fa-4x"></i>
+    <h3>Influential Articles</h3>
+    <p style="color : white;" >We have all the article that supports in making tour personality.</p>
+  </div>
+   <div class = "feature-box col-lg-4">
+       <i class="icon fa-solid fa-headphones fa-4x"></i>
+      <h3>Inspiring Vedios and Podcasts</h3>
+    <p style="color : white;" >Find Vedios associated to content article that makes you better towards society.</p>
+  </div>
+   </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+       <table cellspacing = "20">
+        <tr>
+            <td> <h4 class ="para1" ><b>Quotes that improves our thoughts
+                so we can think about our passions, skills, and our interests
+                and seek to find work that we’re motivated to complete.</b></h4>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet"></td>
+            <td class = "t">____________________</td>
+            <td>
+                <img class = "img2" src="static/images/Image2.jpg" alt="img2-profile">
+            </td>
+        </tr>
+    </table>
+
+  </section>
+
+  <section id = "Vedhed">
+  <table cellspacing = "20">
+        <tr>
+            <td><i class="fa-solid fa-video fa-9x"></i></td>
+            <td class = "t1">____________________</td>
+            <td class = "Ved">
+
+                Get the Inspiring and Motivational Vedios that would
+                give boost to your positive thoughts and eradicate all
+                the toxic and negative traits from your personality.
+
+            </td>
+        </tr>
+    </table>
+  </section>
+
+  <section id = "Motivationvedio">
+   <div id="Motivational-carousel" class="carousel slide" data-ride="false" data-pause = "hover" >
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="demo" src="static/images/demo1.jpg" alt="First slide">
+
+    </div>
+    <div class="carousel-item">
+      <img class="demo" src="static/images/demo2.jpg" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+            <a href = "audio.html"><b>Audio</b></a>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="demo" src="static/images/demo3.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+            <a class = "Vedio1" href = "static/Vedios/How to Deal with Fear of Successvwe.mp4"><b>How to deal with Fear of success</b></a>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
+        </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#Motivational-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#Motivational-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+      </section>
+
+  <!--</section> -->
+
+  <section id = "Podhed">
+  <table cellspacing = "20">
+        <tr>
+            <td><i class="fa-solid fa-headphones-simple fa-10x"></i></td>
+            <td class = "t1">____________________</td>
+            <td class = "Pod">
+
+                Listen to energetic and powerful audio
+                Podcast and music that would energize our souls, removes our laziness
+                and make our mind to stay positive and active to work in
+                order to achieve our goal dreams.
+
+            </td>
+        </tr>
+    </table>
+  </section>
+
+  <!-- podcast -->
+  <div class="row">
+  <div class="card col-lg-4" style="width: 18rem;">
+  <img class="card-img-top" src="static/images/pod1.jpg" alt="Card image ">
+  <div class="card-body">
+    <h5 class="cadtext card-title"><b>Be Yourself</b></h5>
+    <p class="cadtext card-text"><b>Motivational Audio Podcast</b></p>
+      <a href= "static/podcast/Be Yourself.mp4" class="btn btn-primary">
+          <i class="fa-solid fa-circle-play"></i>
+          <b>Play</b></a>
+  </div>
+  </div>
+  <div class="card col-lg-4" style="width: 18rem;">
+  <img class="card-img-top" src="static/images/pod2.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="cadtext card-title"><b>Remember Why You Started</b></h5>
+    <p class="cadtext card-text"><b>Motivational Audio Podcast</b></p>
+      <a href= "static/podcast/Remember Why You Started.mp4" class="btn btn-primary">
+          <i class="fa-solid fa-circle-play"></i>
+          <b>Play</b></a>
+  </div>
+  </div>
+    <div class="card col-lg-4" style="width: 18rem;">
+  <img class="card-img-top" src="static/images/pod3.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="cadtext card-title"><b>Legends</b></h5>
+    <p class="cadtext card-text"><b>Motivational Audio Podcast</b></p>
+      <a href= "static/podcast/Legends.mp4" class="btn btn-primary">
+          <i class="fa-solid fa-circle-play"></i>
+          <b>Play</b></a>
+  </div>
+  </div>
+  </div>
+
+
+  <section id = "hftips">
+      <table cellspacing = "1000">
+        <tr>
+            <td><div class="box">
+        <div class="box red">
+        <img class = "ab" src="static/images/ltips.jpg" alt="ltips image ">
+        </div>
+        <div class=" box yellow">
+        <img class = "bc" src="static/images/ftips.jpg" alt="ftips image ">
+        </div>
+        <div class="box blue">
+        <img class = "cd" src="static/images/htips.jpg" alt="htips image ">
+        </div>
+        </div>
+            </td>
+                </tr>
+          <tr>
+            <td class = "t1">_______________________________________________________________________________________</td>
+            <td class = "ti">
+                 Get the best Health & Finance tips and Life
+                 hacks and lot more articles to maintain
+                 and develop better lifestyle.
+            </td>
+        </tr>
+    </table>
+
+  </section>
+
+    <!-- Social Media -->
+  <section id = "ctasm">
+      <h4 class="ctas">Follow us on following Social Media Accounts : </h4>
+   <div class="row">
+  <div class = "feature-box col-lg-4">
+      <a href="https://www.instagram.com/ishanvj25/"><i class="fa-brands fa-instagram fa-5x"></i></a>
+    <p><b>Instagram</b></p>
+  </div>
+  <div class = "feature-box col-lg-4">
+      <a href="https://www.facebook.com/ishan.vijay.731"><i class="fa-brands fa-facebook fa-5x"></i></a>
+    <p><b>facebook</b></p>
+  </div>
+   <div class = "feature-box col-lg-4">
+       <a href="https://www.linkedin.com/in/ishan-vijay-49a655224/"><i class="fa-brands fa-linkedin fa-5x"></i></a>
+     <p><b>Linkedin</b></p>
+  </div>
+   </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <p><b>© Copyright 2022 Make Myself better</b></p>
+
+  </footer>
+
+{% endif %}
+</body>
+
+</html>

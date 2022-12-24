@@ -1,0 +1,39 @@
+{% extends "dase.html" %}
+{% load static %}
+{% load blog_tags  %}
+
+
+{% block title %}Make myself better blogs{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+{% block content %}
+<section style="padding-top : 15%;">
+<script src="//code.tidio.co/kvcr2wwy2wflygajfvpwhl2iglwz1dcd.js" async></script>
+  <h1>Make myself better</h1>
+  <!-- Fontawsome -->
+  <script src="https://kit.fontawesome.com/190550c134.js" crossorigin="anonymous"></script>
+  <a href="/blog/search/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><i class="fa-solid fa-magnifying-glass"></i>Search Blog</a>
+{% if tag %}
+<h2 style="color: black;">Posts tag with "{{tag.name}}"</h2>
+{% endif %}
+  {% for post in posts %}
+    <h2>
+      <a
+        href = "{{ post.get_absolute_url}}">{{ post.title }}
+      </a>
+
+    </h2>
+    <p class="date">
+      Published {{ post.publish }} by {{ post.author }}
+    </p>
+<p class="tags">
+  Tags:
+  {% for tag in post.tags.all %}
+  <a href="{% url "blog:post_list_by_tag" tag.slug %}">{{ tag.name }}</a>
+  {% if not forloop.last %}, {% endif %}
+  {% endfor %}
+</p>
+    {{ post.body| markdown |truncatewords:30}}
+  {% endfor %}
+{% include "pagi.html" with page=page_obj  %}
+</section>
+{% endblock %}

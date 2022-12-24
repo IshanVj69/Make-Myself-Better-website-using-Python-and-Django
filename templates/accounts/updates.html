@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %} Update Article {% endblock %}
+
+
+{% block style %}
+<style>
+    .register_style
+    {
+    width: 500px;
+    margin: auto;
+
+    }
+</style>
+
+{% endblock style %}
+
+{% block body %}
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+   <div class="container mt-5 register_style">
+       <h3>Register an account</h3>
+       <form action = "" method="POST" novalidate>
+          {{form | crispy}}
+           {% csrf_token %}
+
+           <input type="submit" value="Update Article" class="btn btn-success">
+       </form>
+   </div>
+
+{% endblock %}
